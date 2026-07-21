@@ -112,3 +112,26 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# ==========================================
+# CẤU HÌNH TỪ BASHRC MÁY CŨ CHUYỂN SANG
+# ==========================================
+
+# Thêm Toolchain RISC-V vào biến môi trường PATH
+export PATH=$PATH:/opt/xpack-riscv-none-embed-gcc-10.2.0-1.2/bin
+
+# Load file môi trường cục bộ (thường là của Rust, Python hoặc công cụ khác).
+# Chú ý: Vì máy mới của bạn hiện chưa có file này, mình đã thêm dấu # để tạm tắt nó đi tránh báo lỗi. 
+# Khi nào bạn copy lại thư mục ~/.local từ máy cũ sang, bạn có thể xóa dấu # đi.
+# . "$HOME/.local/bin/env"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/chunhthanhde/.local/bin:$PATH"
+export PATH="/home/chunhthanhde/.local/bin:$PATH"
+alias chrome='nohup google-chrome > /dev/null 2>&1 &'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
